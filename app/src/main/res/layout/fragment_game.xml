@@ -6,6 +6,7 @@
     tools:context="com.example.android.navigation.GameFragment">
 
     <data>
+
         <variable
             name="game"
             type="com.maurozegarra.example.trivia.GameFragment" />
