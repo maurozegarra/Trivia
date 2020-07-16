@@ -21,6 +21,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.maurozegarra.example.trivia.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
@@ -29,7 +30,10 @@ class GameWonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding =  FragmentGameWonBinding.inflate(inflater, container, false)
+        val binding = FragmentGameWonBinding.inflate(inflater, container, false)
+        binding.nextMatchButton.setOnClickListener {
+            findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+        }
         return binding.root
     }
 }
